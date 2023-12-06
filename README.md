@@ -3,9 +3,9 @@
 - [Zig Design Patterns](#zig-design-patterns)
   - [About](#about)
   - [Examples](#examples)
-    - [`anytype`](#anytype)
     - [`@fieldParentPtr`](#fieldparentptr)
-    - [`vtable`](#vtable)
+    - [Type Function](#type-function)
+    - [Virtual Table](#virtual-table)
   - [License](#license)
 
 ## About
@@ -14,19 +14,27 @@ This repository contains examples of common design patterns found in Zig's stand
 
 ## Examples
 
-### `anytype`
-
-`zig build anytype`
+All examples are annotated with comments.
 
 ### `@fieldParentPtr`
 
-`zig build field_parent_ptr`
+```bash
+zig build field_parent_ptr
+```
 
 ![field parent ptr](.github/assets/field_parent_ptr.svg)
 
-### `vtable`
+### Type Function
 
-`zig build vtable`
+```bash
+zig build type_function
+```
+
+### Virtual Table
+
+```bash
+zig build vtable
+```
 
 ## License
 

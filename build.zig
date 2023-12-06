@@ -1,8 +1,8 @@
 const std = @import("std");
 
 pub const examples = .{
-    .{ "anytype", "src/anytype.zig" },
     .{ "field_parent_ptr", "src/field_parent_ptr.zig" },
+    .{ "type_function", "src/type_function.zig" },
     .{ "vtable", "src/vtable.zig" },
 };
 
