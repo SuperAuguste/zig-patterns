@@ -49,3 +49,9 @@ test {
         animal.sayHello(animal);
     }
 }
+
+// When to use:
+// - When you want to call a function over a single, unified interface
+//
+// When not to use:
+// - If you have a lot of common functions but few common values; see vtable

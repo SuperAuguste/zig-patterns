@@ -99,3 +99,16 @@ test {
     try summarizeContrib(issue_contrib);
     try summarizeContrib(pull_request_contrib);
 }
+
+// When to use:
+// - When you don't want runtime overhead
+// - When you want incredibly strong type correctness guarantees
+//   - this avoids most runtime errors potentially found in other techniques
+//   - you can also use @compileError to make certain behaviors illegal
+//     100% at compile time
+// - When you want your structure to be easily extended from Zig code
+//
+// When not to use:
+// - If you want to store all instances in a variable of a single type
+//   (there is no single type like in the vtable or @fieldParentPtr examples,
+//    so this is not possible)
