@@ -39,7 +39,6 @@ pub const HelloWorldSayer = struct {
 
     fn run(ctx: *anyopaque, n: usize) anyerror!void {
         const hws: *HelloWorldSayer = @alignCast(@ptrCast(ctx));
-        hws.activated = true;
 
         if (!hws.activated)
             return;
@@ -79,7 +78,6 @@ pub const BruhSayer = struct {
 
     fn run(ctx: *anyopaque, n: usize) anyerror!void {
         const bs: *BruhSayer = @alignCast(@ptrCast(ctx));
-        bs.activated = true;
 
         if (!bs.activated)
             return;
