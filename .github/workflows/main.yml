@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    paths:
+      - ".github/workflows/main.yml"
+      - "**.zig"
+      - "build.zig.zon"
+  pull_request:
+    paths:
+      - ".github/workflows/main.yml"
+      - "**.zig"
+      - "build.zig.zon"
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: goto-bus-stop/setup-zig@v2
+        with:
+          version: master
+
+      - name: Get Zig version
+        id: zig_version
+        run: echo "zig_version=$(zig version)" >> $GITHUB_OUTPUT
+
+      - run: zig env
+
+      - name: Run zig fmt
+        run: zig fmt --check .
+
+      - name: Run tests
+        run: zig build all
