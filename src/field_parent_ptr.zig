@@ -1,4 +1,15 @@
 //! See ![this diagram](../.github/assets/field_parent_ptr.svg)
+//!
+//! When to use:
+//! - When you want to call one function with a unified interface
+//!   whose implementers share common fields
+//!
+//! When not to use:
+//! - If you have a lot of common functions and few / no common fields
+//!   - You could use a vtable
+//!   - You could use an `inline switch`
+//! - If you want type correctness guarantees at compile time, use
+//!   a type function
 
 const std = @import("std");
 
@@ -51,9 +62,3 @@ test {
         animal.sayHello(animal);
     }
 }
-
-// When to use:
-// - When you want to call a function over a single, unified interface
-//
-// When not to use:
-// - If you have a lot of common functions but few common fields; see vtable

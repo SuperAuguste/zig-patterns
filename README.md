@@ -11,7 +11,7 @@ This repository contains examples of common design patterns found in Zig's stand
 
 ## Examples
 
-All examples are annotated with comments. Recommendations regarding when to use the pattern shown in an example are located at the bottom of the file.
+All examples are annotated with comments including recommendations regarding when to use the patterns shown.
 
 | Example | How to run |
 | ----- | --- |

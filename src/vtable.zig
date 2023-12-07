@@ -1,3 +1,12 @@
+//! When to use:
+//! - When you want to call multiple functions over a single, unified interface
+//!   with very few / no common fields.
+//!
+//! When not to use:
+//! - If you have a lot of common fields, you could use `@fieldParentPtr`
+//! - If you have only one common function, you could replace the vtable pointer
+//!   with a function pointer (I'd call this a "type erased")
+
 const std = @import("std");
 
 pub const Extension = struct {
@@ -117,9 +126,3 @@ test {
         try extension.run(3);
     }
 }
-
-// When to use:
-// - When you want to call functions over a single, unified interface
-//
-// When not to use:
-// - If you have a lot of common fields but few common functions; see `@fieldParentPtr`

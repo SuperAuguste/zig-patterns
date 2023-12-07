@@ -1,3 +1,12 @@
+//! When to use:
+//! - When you don't want runtime overhead
+//! - When you want reasonably strong type correctness guarantees
+//!   - this avoids most runtime errors potentially found in other techniques
+//!
+//! When not to use:
+//! - If you want extensability! This solution is not extensible in any way;
+//!   a user would have to modify the structure directly.
+
 const std = @import("std");
 
 pub const Player = union(enum) {
@@ -76,12 +85,3 @@ test {
     try crewmate.doTask();
     try std.testing.expectError(error.IllegalAction, impostor.doTask());
 }
-
-// When to use:
-// - When you don't want runtime overhead
-// - When you want reasonably strong type correctness guarantees
-//   - this avoids most runtime errors potentially found in other techniques
-//
-// When not to use:
-// - If you want extensability! This solution is not extensible in any way,
-//   a user would have to modify the structure directly.
