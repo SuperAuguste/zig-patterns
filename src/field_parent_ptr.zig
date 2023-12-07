@@ -1,3 +1,5 @@
+//! See ![this diagram](../.github/assets/field_parent_ptr.svg)
+
 const std = @import("std");
 
 pub const Animal = struct {

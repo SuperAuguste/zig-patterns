@@ -3,10 +3,6 @@
 - [Zig Design Patterns](#zig-design-patterns)
   - [About](#about)
   - [Examples](#examples)
-    - [`@fieldParentPtr`](#fieldparentptr)
-    - [Inline Switch](#inline-switch)
-    - [Type Function](#type-function)
-    - [Virtual Table](#virtual-table)
   - [License](#license)
 
 ## About
@@ -17,31 +13,12 @@ This repository contains examples of common design patterns found in Zig's stand
 
 All examples are annotated with comments. Recommendations regarding when to use the pattern shown in an example are located at the bottom of the file.
 
-### [`@fieldParentPtr`](src/field_parent_ptr.zig)
-
-```bash
-zig build field_parent_ptr
-```
-
-![field parent ptr](.github/assets/field_parent_ptr.svg)
-
-### [Inline Switch](src/inline_switch.zig)
-
-```bash
-zig build inline_switch
-```
-
-### [Type Function](src/type_function.zig)
-
-```bash
-zig build type_function
-```
-
-### [Virtual Table](src/vtable.zig)
-
-```bash
-zig build vtable
-```
+| Example | How to run |
+| ----- | --- |
+| [`@fieldParentPtr`](src/field_parent_ptr.zig) | `zig build field_parent_ptr` |
+| [Inline Switch](src/inline_switch.zig) | `zig build inline_switch` |
+| [Type Function](src/type_function.zig) | `zig build type_function` |
+| [Virtual Table](src/vtable.zig) | `zig build vtable` |
 
 ## License
 
