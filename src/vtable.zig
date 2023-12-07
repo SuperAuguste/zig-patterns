@@ -122,4 +122,4 @@ test {
 // - When you want to call functions over a single, unified interface
 //
 // When not to use:
-// - If you have a lot of common values but few common functions; see `@fieldParentPtr`
+// - If you have a lot of common fields but few common functions; see `@fieldParentPtr`

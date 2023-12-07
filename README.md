@@ -17,7 +17,7 @@ This repository contains examples of common design patterns found in Zig's stand
 
 All examples are annotated with comments. Recommendations regarding when to use the pattern shown in an example are located at the bottom of the file.
 
-### `@fieldParentPtr`
+### [`@fieldParentPtr`](src/field_parent_ptr.zig)
 
 ```bash
 zig build field_parent_ptr
@@ -25,19 +25,19 @@ zig build field_parent_ptr
 
 ![field parent ptr](.github/assets/field_parent_ptr.svg)
 
-### Inline Switch
+### [Inline Switch](src/inline_switch.zig)
 
 ```bash
 zig build inline_switch
 ```
 
-### Type Function
+### [Type Function](src/type_function.zig)
 
 ```bash
 zig build type_function
 ```
 
-### Virtual Table
+### [Virtual Table](src/vtable.zig)
 
 ```bash
 zig build vtable
