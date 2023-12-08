@@ -4,7 +4,7 @@
 //!   - this avoids most runtime errors potentially found in other techniques
 //!
 //! When not to use:
-//! - If you want extensability! This solution is not extensible in any way;
+//! - If you want extensibility! This solution is not extensible in any way, i.e.
 //!   a user would have to modify the structure directly.
 
 const std = @import("std");
