@@ -6,24 +6,24 @@
 //! time values and return a type.
 //!
 //! Here, we create an an all-encompassing type function, Contribution,
-//! that given a summarize function and associated types will call that
+//! that given a summarize function and associated types, will call that
 //! function with additional logic.
 //!
 //! Each call to Contribution with unique parameters returns
 //! a unique type.
 //!
 //! When to use:
-//! - When you don't want runtime overhead
-//! - When you want incredibly strong type correctness guarantees
-//!   - this avoids most runtime errors potentially found in other techniques
-//!   - you can also use @compileError to make certain behaviors illegal
-//!     100% at compile time
-//! - When you want your structure to be easily extended from Zig code
+//! - When you don't want runtime overhead.
+//! - When you want incredibly strong type correctness guarantees.
+//!   - This avoids most runtime errors potentially found in other techniques.
+//!   - You can also use @compileError to make certain behaviors illegal
+//!     100% at compile time.
+//! - When you want your structure to be easily extended from Zig code.
 //!
 //! When not to use:
 //! - If you want to store all instances in a variable of a single type
 //!   (there is no single type like in the vtable or @fieldParentPtr examples,
-//!    so this is not possible)
+//!    so this is not possible).
 
 const std = @import("std");
 

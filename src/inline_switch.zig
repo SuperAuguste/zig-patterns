@@ -1,7 +1,7 @@
 //! When to use:
-//! - When you don't want runtime overhead
-//! - When you want reasonably strong type correctness guarantees
-//!   - this avoids most runtime errors potentially found in other techniques
+//! - When you don't want runtime overhead.
+//! - When you want reasonably strong type correctness guarantees.
+//!   - This avoids most runtime errors potentially found in other techniques.
 //!
 //! When not to use:
 //! - If you want extensibility! This solution is not extensible in any way, i.e.
