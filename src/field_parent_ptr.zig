@@ -2,14 +2,14 @@
 //!
 //! When to use:
 //! - When you want to call one function with a unified interface
-//!   whose implementers share common fields
+//!   whose implementers share common fields.
 //!
 //! When not to use:
 //! - If you have a lot of common functions and few / no common fields
-//!   - You could use a vtable
-//!   - You could use an `inline switch`
+//!   - You could use a vtable.
+//!   - You could use an `inline switch`.
 //! - If you want type correctness guarantees at compile time, use
-//!   a type function
+//!   a type function instead.
 
 const std = @import("std");
 

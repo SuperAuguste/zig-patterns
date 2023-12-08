@@ -3,9 +3,9 @@
 //!   with very few / no common fields.
 //!
 //! When not to use:
-//! - If you have a lot of common fields, you could use `@fieldParentPtr`
+//! - If you have a lot of common fields, you could use `@fieldParentPtr` instead.
 //! - If you have only one common function, you could replace the vtable pointer
-//!   with a function pointer (I'd call this a "type erased")
+//!   with a function pointer (I'd call this a "type erased").
 
 const std = @import("std");
 
