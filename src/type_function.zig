@@ -5,7 +5,7 @@
 //! to call them, typefuncs), which are functions that take in compile
 //! time values and return a type.
 //!
-//! Here, we create an an all-encompassing type function, Contribution,
+//! Here, we create an all-encompassing type function, Contribution,
 //! that given a summarize function and associated types, will call that
 //! function with additional logic.
 //!
