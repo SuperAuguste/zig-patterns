@@ -5,27 +5,27 @@
 //! with any number representing an index into `B`, but if we were to,
 //! for example, access `A` with a number representing an index into `B`,
 //! we could access garbage information or cause an out of bounds accesss.
-//! 
+//!
 //! A real world example I've run into while working on ZLS is accidentally
 //! swapping `TokenIndex`s and `Ast.Node.Index`s, which are both `= u32`.
-//! 
+//!
 //! ```zig
 //! pub fn accessANodeNotDistinct(node_index: u32) void {
 //!     // ...
 //! }
-//! 
+//!
 //! const token_index_not_a_node: u32 = 10;
 //! accessANodeNotDistinct(token_index_not_a_node);
-//! 
+//!
 //! // kabloom!
 //! ```
-//! 
+//!
 //! How can we avoid this? Distinct integers!
 
 const std = @import("std");
 
-pub const TokenIndex = enum(u32) {_};
-pub const NodeIndex = enum(u32) {_};
+pub const TokenIndex = enum(u32) { _ };
+pub const NodeIndex = enum(u32) { _ };
 
 pub fn lastToken() TokenIndex {
     return @enumFromInt(0);
