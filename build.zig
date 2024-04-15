@@ -1,11 +1,12 @@
 const std = @import("std");
 
 pub const examples = .{
-    .{ "field_parent_ptr", "src/field_parent_ptr.zig" },
-    .{ "inline_switch", "src/inline_switch.zig" },
-    .{ "multi_array_list", "src/multi_array_list.zig" },
-    .{ "type_function", "src/type_function.zig" },
-    .{ "vtable", "src/vtable.zig" },
+    .{ "field_parent_ptr", "src/typing/field_parent_ptr.zig" },
+    .{ "inline_switch", "src/typing/inline_switch.zig" },
+    .{ "multi_array_list", "src/data/multi_array_list.zig" },
+    .{ "type_function", "src/typing/type_function.zig" },
+    .{ "vtable", "src/typing/vtable.zig" },
+    .{ "distinct_integers", "src/typing/distinct_integers.zig" },
 };
 
 pub fn build(b: *std.Build) void {

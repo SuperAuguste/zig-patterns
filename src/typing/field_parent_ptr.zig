@@ -24,7 +24,7 @@ pub const Cat = struct {
     favorite_food_brand: []const u8,
 
     pub fn sayHello(animal: *const Animal) void {
-        const cat = @fieldParentPtr(Cat, "animal", animal);
+        const cat: *const Cat = @fieldParentPtr("animal", animal);
         std.debug.print("Hi my name is {s} and I only eat {s}\n", .{ animal.name, cat.favorite_food_brand });
     }
 };
@@ -35,7 +35,7 @@ pub const Dog = struct {
     favorite_dog_toy: []const u8,
 
     pub fn sayHello(animal: *const Animal) void {
-        const dog = @fieldParentPtr(Dog, "animal", animal);
+        const dog: *const Dog = @fieldParentPtr("animal", animal);
         std.debug.print("Hi my name is {s} and my favorite dog toy is {s}\n", .{ animal.name, dog.favorite_dog_toy });
     }
 };
